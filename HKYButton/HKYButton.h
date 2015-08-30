@@ -21,6 +21,8 @@ typedef NS_ENUM(NSInteger, HKYButtonContentType) {
     CGFloat _imageH;
     CGFloat _titleW;
     CGFloat _titleH;
+    CGFloat _kSpaceX;
+    CGFloat _kSpaceY;
     HKYButtonContentType _type;
 }
 

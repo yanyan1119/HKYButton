@@ -51,26 +51,30 @@
     {
         case HKYButtonContentTypeTitleRightImageLeft:
         {
-            imageX = 5;
+            _kSpaceX = (contentRect.size.width - _imageW - _titleW)/3;
+            imageX = _kSpaceX;
             imageY = (contentRect.size.height - _imageH)/2;
         }
             break;
         case HKYButtonContentTypeTitleLeftImageRight:
         {
-            imageX = contentRect.size.width - _imageW - 5;
+            _kSpaceX = (contentRect.size.width - _imageW - _titleW)/3;
+            imageX = _kSpaceX * 2 + _titleW;
             imageY = (contentRect.size.height - _imageH)/2;
         }
             break;
         case HKYButtonContentTypeTitleTopImageBottom:
         {
             imageX = (contentRect.size.width - _imageW)/2;
-            imageY = contentRect.size.height - _imageH - 5;
+            _kSpaceY = (contentRect.size.height - _imageH - _titleH)/3;
+            imageY = _kSpaceY * 2 + _titleH;
         }
             break;
         case HKYButtonContentTypeTitleBottomImageTop:
         {
             imageX = (contentRect.size.width - _imageW)/2;
-            imageY = 5;
+            _kSpaceY = (contentRect.size.height - _imageH - _titleH)/3;
+            imageY = _kSpaceY;
         }
             break;
             
@@ -93,26 +97,30 @@
     {
         case HKYButtonContentTypeTitleRightImageLeft:
         {
-            titleX = _imageW + 5;
+            _kSpaceX = (contentRect.size.width - _imageW - _titleW)/3;
+            titleX = _kSpaceX * 2 + _imageW;
             titleY = (contentRect.size.height - _titleH)/2;
         }
             break;
         case HKYButtonContentTypeTitleLeftImageRight:
         {
-            titleX = 0;
+            _kSpaceX = (contentRect.size.width - _imageW - _titleW)/3;
+            titleX = _kSpaceX;
             titleY = (contentRect.size.height - _titleH)/2;
         }
             break;
         case HKYButtonContentTypeTitleTopImageBottom:
         {
             titleX = (contentRect.size.width - _titleW)/2;
-            titleY = 0;
+            _kSpaceY = (contentRect.size.height - _imageH - _titleH)/3;
+            titleY = _kSpaceY;
         }
             break;
         case HKYButtonContentTypeTitleBottomImageTop:
         {
             titleX = (contentRect.size.width - _titleW)/2;
-            titleY = _imageH + 5;
+            _kSpaceY = (contentRect.size.height - _imageH - _titleH)/3;
+            titleY = _kSpaceY * 2 + _imageH;
         }
             break;
             
