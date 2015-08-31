@@ -2,7 +2,7 @@
 //  HKYButton.m
 //  HKYButton
 //
-//  Created by 黄孔炎 on 15/8/28.
+//  Created by hky on 15/8/28.
 //  Copyright (c) 2015年 hky. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self == [super initWithFrame:frame]) {
+    if (self = [super initWithFrame:frame]) {
         _type = HKYButtonContentTypeTitleRightImageLeft;
     }
     return self;
@@ -44,8 +44,8 @@
 
 -(CGRect)imageRectForContentRect:(CGRect)contentRect
 {
-    CGFloat imageX = (contentRect.size.width - _imageW)/2;
-    CGFloat imageY = 5;
+    CGFloat imageX ;
+    CGFloat imageY;
 
     switch (_type)
     {
